@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build: .
+    container_name: cartype-frontend-run
+    image: cartype-frontend:dev
+    ports:
+      - "11000:4173"
+    restart: always
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
